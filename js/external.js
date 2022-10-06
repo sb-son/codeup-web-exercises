@@ -14,6 +14,7 @@ var hercules = prompt('How many days did you rent Hercules');
 var totalDays = parseInt(hercules) + parseInt(brotherBear) + parseInt(littleMermaid);
 var totalCost = totalDays * 3;
 console.log('Total cost is: ' + totalCost);
+alert('Total cost is: ' + totalCost);
 
 var google = 400;
 var amazon = 380;
@@ -23,6 +24,7 @@ var hoursWorkedGoogle = prompt('How many hours did you work at google?');
 var hoursWorkedAmazon = prompt('How many hours did you work at amazon?');
 var totalPayment = parseInt(hoursWorkedAmazon * amazon) + parseInt(hoursWorkedGoogle * google) + parseInt(hoursWorkedFacebook * facebook);
 console.log('Total pay is: ' + totalPayment);
+alert('Total pay is: ' + totalPayment);
 
 var classSchedule = confirm('Do you have room in your schedule? Hit OK for yes or cancel for no.');
 console.log(classSchedule);
@@ -32,7 +34,6 @@ if (classSchedule && scheduleConflict) {
 } else {
     alert('Student not enrolled')
 }
-
 
 var isMemberPremium = confirm("Is member premium? OK for yes, cancel for no.");
 var itemsInCart = prompt('How many items do you have?');
