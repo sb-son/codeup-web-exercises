@@ -1,5 +1,6 @@
 "use strict";
 
+(function (){
 /**
  * TODO:
  * Create a function called 'sayHello' that takes a parameter 'name'.
@@ -101,8 +102,8 @@ alert("You should leave a $" + calculateTip() + " tip.");
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
 function applyDiscount(originalPrice, discountPercent) {
-    originalPrice = parseFloat(prompt("Enter Price"))
-    discountPercent = parseFloat(prompt('What is your discount percent?'))
+    originalPrice = parseFloat(prompt("Enter Price"));
+    discountPercent = parseFloat(prompt('What is your discount percent?'));
     let newDiscountPercent = (discountPercent/100);
     let newDiscountAmount = originalPrice * newDiscountPercent;
     let newPrice = originalPrice - newDiscountAmount;
@@ -110,3 +111,4 @@ function applyDiscount(originalPrice, discountPercent) {
 }
 
 console.log(applyDiscount());
+})();
