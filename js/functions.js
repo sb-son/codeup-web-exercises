@@ -104,8 +104,7 @@
     function applyDiscount(originalPrice, discountPercent) {
         originalPrice = parseFloat(prompt("Enter Price"));
         discountPercent = parseFloat(prompt('What is your discount percent?'));
-        let newDiscountPercent = (discountPercent/100);
-        let newDiscountAmount = originalPrice * newDiscountPercent;
+        let newDiscountAmount = originalPrice * (discountPercent/100);
         let newPrice = originalPrice - newDiscountAmount;
         return newPrice.toFixed(2);
     }
