@@ -1,5 +1,5 @@
 "use strict";
-
+(function(){
 /* ########################################################################## */
 
 /**
@@ -32,7 +32,7 @@ function analyzeColor(color = prompt("What color do you want to analyze?".toLowe
         return color + " is alright";
     }
 }
-console.log(analyzeColor());
+//console.log(analyzeColor());
 // Don't change the next two lines!
 // These lines create two variables for you:
 // - `colors`: a list of the colors of the rainbow
@@ -71,7 +71,8 @@ switch (switchColor) {
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-
+//I used a prompt in my function
+alert(analyzeColor())
 /* ########################################################################## */
 
 /**
@@ -171,4 +172,4 @@ if (confirm("Would you like to enter a number?") == true) {
             } else if (userNumber < 0) {
                 alert(userNumber + " is negative.")
             }
-}
+}})();
