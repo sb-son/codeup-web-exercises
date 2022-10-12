@@ -134,7 +134,7 @@ console.log(calculateTotal(5, 100)); // returns 0
 // Generate a random number between 0 and 6
 //var luckyNumber = Math.floor(Math.random() * 6);
 let totalBill = parseFloat(prompt("What was your total bill?"));
-alert(calculateTotal(randomLuckyNumber, totalBill));
+alert("Your lucky number is " + randomLuckyNumber + ". Your price before discount is " + totalBill + ". Your total after discount is " + calculateTotal(randomLuckyNumber, totalBill));
 /**
  * TODO:
  * Write some JavaScript that uses a `confirm` dialog to ask the user if they
