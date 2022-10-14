@@ -1,5 +1,5 @@
 'use strict';
-
+(function (){
 let input = prompt("Enter an odd number between 1 and 50");
 while(true) {
     if (input % 2 === 0) {
@@ -15,4 +15,5 @@ for (let i = 1; i < 50; i++) {
         console.log('Here is an odd number: ' + i);
     }
 }
+})();
 

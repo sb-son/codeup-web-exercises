@@ -1,4 +1,5 @@
 "use strict";
+(function (){
 //while
 function multiplyByTwo() {
     let i = 1;
@@ -22,3 +23,4 @@ do {
 } while (allCones > 0) {
     console.log("All cones sold!")
 }
+})();
