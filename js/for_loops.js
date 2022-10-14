@@ -19,6 +19,17 @@ function getRandomBetween200And20(max, min) {
         }
     }
 }
-getRandomBetween200And20(200, 20);
+getRandomBetween200And20(201, 20);
 
-for ()
+
+for (i = 1; i < 10; i++) {
+   let str = "";
+    for (j = 0; j < i; j++) {
+        str = i + str;
+    }
+    console.log(str);
+}
+
+for (i=100; i>=5; i-=5){
+    console.log(i);
+}
