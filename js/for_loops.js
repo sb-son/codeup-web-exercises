@@ -21,7 +21,6 @@ function getRandomBetween200And20(max, min) {
 }
 getRandomBetween200And20(201, 20);
 
-
 for (i = 1; i < 10; i++) {
    let str = "";
     for (j = 0; j < i; j++) {
