@@ -75,4 +75,22 @@
     secondElement(names)
     lastElement(names)
 
+    console.log("Three functions exercise using .slice");
+
+    function firstEle(arr) {
+        return console.log("This is the first element: " + arr.slice(0,1))
+    }
+
+    function secondEle(arr) {
+        return console.log("This is the second element: " + arr.slice(1,2))
+    }
+
+    function lastEle(arr) {
+        return console.log("This is the last element: " + arr.slice(-1))
+    }
+
+    firstEle(names)
+    secondEle(names)
+    lastEle(names)
+
 })();
