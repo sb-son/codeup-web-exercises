@@ -30,6 +30,7 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
+    console.log('Using a for loop');
     for (let i = 0; i < names.length; i++) {
         console.log('The name at index ' + i + ' is: ' + names[i])
     }
@@ -38,6 +39,10 @@
      * TODO 5:
      * Refactor your above code to use a `forEach` loop
      */
+    console.log("Using a forEach loop");
+    names.forEach(function (name, index) {
+        console.log('The name at index ' + index + ' is: ' + name);
+    })
 
     /**
      * TODO 6:
