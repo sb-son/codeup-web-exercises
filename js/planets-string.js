@@ -5,16 +5,17 @@
     var planetsArray;
 
     /**
-     * TODO:
+     * TODO 1:
      * Convert planetsString to an array, and save it in a variable named
      * planetsArray.
      * console.log planetsArray to check your work
      */
+    planetsArray = planetsString.split('|')
 
-    // console.log(planetsArray);
+    console.log(planetsArray);
 
     /**
-     * TODO:
+     * TODO 2:
      * Create a string with <br> tags between each planet. console.log() your
      * results. Why might this be useful?
      *
