@@ -57,16 +57,18 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    console.log('Three functions exercise');
+
     function firstElement(arr) {
-        return console.log(arr[0])
+        return console.log("This is the first element: " + arr[0])
     }
 
     function secondElement(arr) {
-        return console.log(arr[1])
+        return console.log("This is the second element: " + arr[1])
     }
 
     function lastElement(arr) {
-        return console.log(arr[arr.length - 1])
+        return console.log("This is the last element: " + arr[arr.length - 1])
     }
 
     firstElement(names)
