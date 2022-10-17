@@ -57,5 +57,16 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    function firstElement() {
+        return
+    }
+
+    function secondElement() {
+        return
+    }
+
+    function lastElement() {
+        return
+    }
 
 })();
