@@ -2,7 +2,7 @@
 (function (){
 let input = prompt("Enter an odd number between 1 and 50");
 while(true) {
-    if (input % 2 === 0) {
+    if (input % 2 === 0 || input > 50 || input < 0) {
         input = prompt("Enter an odd number between 1 and 50");
     } else {
         break;
