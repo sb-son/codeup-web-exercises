@@ -52,9 +52,9 @@
     shoppers.forEach(function (shopper) {
         let discount = 1 - .12
         if (shopper.amount > 200) {
-            console.log(shopper.amount * discount)
+            console.log("Your total after the discount is: " +(shopper.amount * discount))
         } else {
-            console.log(shopper.amount)
+            console.log("Your total is: " + shopper.amount)
         }
     })
 
@@ -134,15 +134,31 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-    // function createBook() {
-    //
-    // }
-    books.forEach(function (book, index) {
-        console.log("Book # " + (index + 1))
-        console.log("Title: " + book.title)
-        console.log("Author: " + book.firstName + " " + book.lastName)
-        console.log('---')
-    })
 
+    function createBook(title, firstName, lastName) {
+        let newBook = {title, firstName, lastName}
+            // books.title = title
+            // books.firstName = firstName
+            // books.lastName = lastName
+        books.unshift(newBook)
+    }
 
+    function showBookInfo() {
+        books.forEach(function (book, index) {
+            console.log("Book # " + (index + 1))
+            console.log("Title: " + book.title)
+            console.log("Author: " + book.firstName + " " + book.lastName)
+            console.log('---')
+        })
+    }
+
+    createBook('myBook', 'Shawn', 'Wilson');
+    showBookInfo()
+
+    // books.forEach(function (book, index) {
+    //     console.log("Book # " + (index + 1))
+    //     console.log("Title: " + book.title)
+    //     console.log("Author: " + book.firstName + " " + book.lastName)
+    //     console.log('---')
+    // })
 })();
