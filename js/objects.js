@@ -137,7 +137,7 @@
 
     function createBook(title, firstName, lastName) {
         let newBook = {title, firstName, lastName}
-        books.unshift(newBook)
+        books.push(newBook)
     }
 
     function showBookInfo() {
@@ -149,6 +149,6 @@
         })
     }
 
-    createBook('myBook', 'Shawn', 'Wilson');
+    createBook('Coding with Shawn', 'Shawn', 'Wilson');
     showBookInfo()
 })();
