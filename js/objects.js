@@ -137,9 +137,6 @@
 
     function createBook(title, firstName, lastName) {
         let newBook = {title, firstName, lastName}
-            // books.title = title
-            // books.firstName = firstName
-            // books.lastName = lastName
         books.unshift(newBook)
     }
 
@@ -154,11 +151,4 @@
 
     createBook('myBook', 'Shawn', 'Wilson');
     showBookInfo()
-
-    // books.forEach(function (book, index) {
-    //     console.log("Book # " + (index + 1))
-    //     console.log("Title: " + book.title)
-    //     console.log("Author: " + book.firstName + " " + book.lastName)
-    //     console.log('---')
-    // })
 })();
