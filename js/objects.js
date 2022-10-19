@@ -64,9 +64,9 @@
     shoppers.forEach(function (shopper) {
         let discount = 1 - .12
         if (shopper.amount > 200) {
-            console.log("Your total after the discount is: " +(shopper.amount * discount))
+            console.log(`${shopper.name}, your total before the discount is: ${(shopper.amount)} \n your total after the discount is: ${(shopper.amount * discount)}`)
         } else {
-            console.log("Your total is: " + shopper.amount)
+            console.log(`${shopper.name}, your total is:  ${shopper.amount}`)
         }
     })
 
@@ -86,30 +86,44 @@
     let books = [
         {
             title: "A Game of Thrones",
-            firstName: "George",
-            lastName: "Martin"
+            author: {
+                firstName: "George",
+                lastName: "Martin"
+            }
         },
         {
             title: "The Lord of the Rings: The Fellowship of the Ring.",
-            firstName: "John",
-            lastName: "Tolkien"
+            author: {
+                firstName: "John",
+                lastName: "Tolkien"
+            }
         },
         {
             title: "To Kill a Mockingbird",
-            firstName: "Harper",
-            lastName: "Lee"
+            author: {
+                firstName: "Harper",
+                lastName: "Lee"
+            }
         },
         {
             title: "It",
-            firstName: "Stephen",
-            lastName: "King"
+            author: {
+                firstName: "Stephen",
+                lastName: "King"
+            }
         },
         {
             title: "Frankenstein",
-            firstName: "Mary",
-            lastName: "Shelley"
+            author: {
+                firstName: "Mary",
+                lastName: "Shelley"
+            }
         }
     ]
+
+    console.log(books[0].title)
+    console.log(books[0].author.firstName)
+    console.log(books[0].author.lastName)
 
     /**
      * TODO:
@@ -148,7 +162,9 @@
      */
 
     function createBook(title, firstName, lastName) {
-        let newBook = {title, firstName, lastName}
+        let newBook = {}
+        newBook.title = title
+        newBook.author = {firstName, lastName}
         books.push(newBook)
     }
 
@@ -156,7 +172,7 @@
         books.forEach(function (book, index) {
             console.log("Book # " + (index + 1))
             console.log("Title: " + book.title)
-            console.log("Author: " + book.firstName + " " + book.lastName)
+            console.log("Author: " + book.author.firstName + " " + book.author.lastName)
             console.log('---')
         })
     }
