@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Forms</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Register With Us</title>
+    </head>
+    <body>
+    <form method="POST" action="https://request-inspector.glitch.me/">
+        <label for="email" style="margin: 23px; padding-bottom: 10px">Email
+        <input type="text" name="email" id="email" placeholder="Enter your email address">
+        </label>
+        <br>
+        <label for="password">Password
+        <input type="password" name="password" id="password" placeholder="Enter your password">
+        </label>
+        <br>
+        <textarea name="bio" cols="30" rows="8"></textarea>
+        <br>
+        How did you hear about us?
+        <br>
+        <input type="radio" name="quiz_question_1" value="billboard">Billboard<br>
+        <input type="radio" name="quiz_question_1" value="radio advertisement">Radio advertisement<br>
+        <input type="radio" name="quiz_question_1" value="internet advertisement">Internet Advertisement<br>
+        <input type="radio" name="quiz_question_1" value="other">Other<br>
 
-</body>
+        <button name="submit">Submit</button>
+    </form>
+    </body>
 </html>
