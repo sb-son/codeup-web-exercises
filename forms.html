@@ -3,11 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Register With Us</title>
+        <style>
+            body {
+                background-image: radial-gradient(circle, #c0da99, #324e43);
+            }
+        </style>
     </head>
     <body>
     <form method="POST" action="https://request-inspector.glitch.me/">
         <label for="email" style="margin: 23px; padding-bottom: 10px">Email
-        <input type="text" name="email" id="email" placeholder="Enter your email address">
+        <input type="text" name="email" id="email" placeholder="Enter your email">
         </label>
         <br>
         <label for="password">Password
@@ -22,6 +27,11 @@
         <input type="radio" name="quiz_question_1" value="radio advertisement">Radio advertisement<br>
         <input type="radio" name="quiz_question_1" value="internet advertisement">Internet Advertisement<br>
         <input type="radio" name="quiz_question_1" value="other">Other<br>
+        <select name="web-browser">
+            <option disabled value="firefox">Firefox</option>
+            <option value="chrome" type="checkbox">Google Chrome</option>
+            <option disabled value="safari">Safari</option>
+        </select>
 
         <button name="submit">Submit</button>
     </form>
