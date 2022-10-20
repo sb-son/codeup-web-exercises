@@ -11,29 +11,29 @@
     </head>
     <body>
     <form method="POST" action="https://request-inspector.glitch.me/">
-        <label for="email" style="margin: 23px; padding-bottom: 10px">Email
-        <input type="text" name="email" id="email" placeholder="Enter your email">
+        <label for="email" style="margin: 23px; color: darksalmon">Email
+        <input type="text" name="email" id="email" placeholder="Enter your email" required>
         </label>
         <br>
-        <label for="password">Password
-        <input type="password" name="password" id="password" placeholder="Enter your password">
+        <label for="password" style="color: darksalmon">Password
+        <input type="password" name="password" id="password" placeholder="Enter your password" required>
         </label>
         <br>
-        <textarea name="bio" cols="30" rows="8"></textarea>
+        <textarea name="bio" cols="30" rows="8" placeholder="Enter bio..." style="margin-left: 65px; margin-top: 7px"></textarea>
         <br>
-        How did you hear about us?
-        <br>
-        <input type="radio" name="quiz_question_1" value="billboard">Billboard<br>
-        <input type="radio" name="quiz_question_1" value="radio advertisement">Radio advertisement<br>
-        <input type="radio" name="quiz_question_1" value="internet advertisement">Internet Advertisement<br>
-        <input type="radio" name="quiz_question_1" value="other">Other<br>
-        <select name="web-browser">
+        <p>How did you hear about us?</p>
+        <input type="radio" name="radio_1" value="billboard" required>Billboard<br>
+        <input type="radio" name="radio_1" value="radio advertisement" required>Radio advertisement<br>
+        <input type="radio" name="radio_1" value="internet advertisement" required>Internet Advertisement<br>
+        <input type="radio" name="radio_1" value="other" required>Other<br>
+        <p>What's your preferred browser?</p>
+        <select name="web_browser">
             <option disabled value="firefox">Firefox</option>
             <option value="chrome" type="checkbox">Google Chrome</option>
             <option disabled value="safari">Safari</option>
         </select>
-
-        <button name="submit">Submit</button>
+        <br>
+        <button type="submit" name="submit" id="button-send" style="margin-top: 20px">Submit</button>
     </form>
     </body>
 </html>
