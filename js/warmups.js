@@ -18,16 +18,6 @@ console.log(getPrice(potatoes));
 //     Ex. const arr = [“Green”, “Blue”, “Periwinkle”];
 // getLongestString(arr) // Returns “Periwinkle”
 
-
-// function getLongestString() {
-//     let longestStr = '';
-//     for (let i = 0; i < colors.length; i++) {
-//             console.log(colors);
-//     }
-// }
-
-//getLongestString()
-
 function getLongestString(arr) {
     let longestStr = "";
     for (let str of arr) {
@@ -38,6 +28,14 @@ function getLongestString(arr) {
     return longestStr;
 }
 
+function findLongestWord(str) {
+    var longestWord = str.sort(function(a, b) {
+        return b.length - a.length;
+    });
+    return longestWord[0];
+}
+
 const colors = ["Green", "Blue", "Periwinkle"];
 
-console.log(getLongestString(colors))
+console.log(findLongestWord(colors));
+console.log(getLongestString(colors));
