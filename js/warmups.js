@@ -20,11 +20,13 @@ console.log(getPrice(potatoes));
 
 
 // function getLongestString() {
+//     let longestStr = '';
 //     for (let i = 0; i < colors.length; i++) {
 //             console.log(colors);
 //     }
 // }
-// getLongestString()
+
+//getLongestString()
 
 function getLongestString(arr) {
     let longestStr = "";
@@ -38,4 +40,4 @@ function getLongestString(arr) {
 
 const colors = ["Green", "Blue", "Periwinkle"];
 
-console.log(getLongestString(colors));
+console.log(getLongestString(colors))
