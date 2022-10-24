@@ -1,4 +1,32 @@
 .fancy-header {
-    color: purple;
+    color: #5BC0EB;
     text-decoration: underline;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #FDE74C;
+    text-decoration: underline;
+}
+
+p {
+    color: #C3423F;
+}
+
+body {
+    background-color: #404E4D;
+    font-family: "Apple SD Gothic Neo", Arial, sans-serif;
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+ul {
+    list-style-type: circle;
+}
+
+td, tr {
+    padding: 12px;
+    font-size: 1.1em;
 }
