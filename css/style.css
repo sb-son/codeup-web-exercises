@@ -1,6 +1,7 @@
 .fancy-header {
     color: #5BC0EB;
     text-decoration: underline;
+    font-size: 3em;
 }
 
 h1, h2 {
@@ -17,6 +18,11 @@ p {
 body {
     background-color: #404E4D;
     font-family: "Apple SD Gothic Neo", Arial, sans-serif;
+    background-image: url("../img/circles.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
 }
 
 li {
@@ -29,7 +35,7 @@ ol {
 }
 
 ul {
-    list-style-type: circle;
+    list-style: inside 1px url("../img/circles.jpg");
 }
 
 td, tr {
