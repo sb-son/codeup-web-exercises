@@ -86,18 +86,37 @@ const hamsters = [
 //     return tallest;
 // }
 
+// function getTallestHamster(arr) {
+//     var maxValue = {heightInMM: 0};
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i].heightInMM > maxValue.heightInMM){
+//             maxValue = arr[i];
+//         }
+//     }
+//     return maxValue;
+// }
+//
+// function getTallestHamster(arr) {
+//     let tallest = Object.keys(arr).reduce((acc, curr) =>
+//     acc.heightInMM ? (arr[curr].heightInMM > acc.heightInMM ? arr[curr] : acc) : arr[curr], {});
+//     return tallest;
+// }
+
+// function compareNumbers(a, b) {
+//     return b.heightInMM - a.heightInMM
+// }
+
 function getTallestHamster(arr) {
-    var maxValue = {heightInMM: 0};
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i].heightInMM > maxValue.heightInMM){
-            maxValue = arr[i];
-        }
-    }
-    return maxValue;
+    var tallest = arr.sort(function(a, b) {
+        return b.heightInMM - a.heightInMM;
+    });
+    return tallest[0];
 }
 
 // function getTallestHamster(arr) {
-//     for ()
+//     var tallest = arr.sort((compareNumbers()) {
+//         return tallest[0]
+//     });
 // }
 
 console.log(getTallestHamster(hamsters));;
