@@ -1,0 +1,21 @@
+* {
+ box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+}
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+a:hover {
+    color: blue;
+}
+ul {
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+}
