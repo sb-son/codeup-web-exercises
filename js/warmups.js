@@ -122,3 +122,30 @@ function getTallestHamster(arr) {
 console.log(getTallestHamster(hamsters));;
 // should return {name: "Boss", heightInMM: 120, fur: ['brown', 'white'],
 // gender: "male", dateOfBirth: "September 21"};
+
+// Warmup: Write FizzBuzz from 1-100;
+// Numbers evenly divisible by 3 should be replaced by Fizz
+// Numbers evenly divisible by 5 should be replaced by Buzz
+// Numbers evenly divisible by both 3 and 5 should be replaced by FizzBuzz
+// All other numbers should be printed in the console.
+
+function fizzBuzz() {
+    for (let i = 0; i < 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log(i + " FizzBuzz")
+        } else if (i % 3 === 0) {
+            console.log(i + " Fizz")
+        } else if (i % 5 === 0) {
+            console.log(i + " Buzz")
+        }
+    }
+}
+
+fizzBuzz();
+
+
+
+
+
+
+
