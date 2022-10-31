@@ -14,8 +14,21 @@ a:hover {
 }
 ul {
     list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+nav {
+    background: lightgrey;
+}
+nav a {
+    font-family: font-family: 'Montserrat', sans-serif;;
+}
+.logo {
+    font-family: 'Work Sans', sans-serif;
 }
 
 .container {
     display: flex;
+
 }
