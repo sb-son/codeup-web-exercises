@@ -10,6 +10,7 @@ a {
     text-decoration: none;
     color: black;
     font-weight: bolder;
+    padding: 0 .5em;
 }
 a:hover {
     color: blue;
@@ -26,17 +27,16 @@ nav a {
     padding: .1em 0;
     display: flex;
     justify-content: center;
-    flex-grow: 1;
-    /*margin: auto;*/
+    /*flex-grow: 1;*/
+    margin: auto;
 }
 li.nav-item {
     display: flex;
-    padding: 5px;
 }
 header nav>ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
 }
