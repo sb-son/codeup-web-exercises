@@ -6,35 +6,36 @@ body {
     padding: 0;
 }
 a {
+    display: inline-block;
     text-decoration: none;
     color: black;
+    font-weight: bolder;
 }
 a:hover {
     color: blue;
 }
 nav {
     background: lightgrey;
-    padding: 0 15px;
 }
 nav a {
     font-family: 'Montserrat', sans-serif;
-    display: inline-block;
 }
 .logo {
     font-family: 'Work Sans', sans-serif;
     font-size: 3em;
-    padding: .2em 0;
+    padding: .1em 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-grow: 1;
+    /*margin: auto;*/
 }
 li.nav-item {
     display: flex;
-    justify-content: space-between;
+    padding: 5px;
 }
-
 header nav>ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     margin: 0;
     padding: 0;
