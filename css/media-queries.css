@@ -32,8 +32,28 @@ main {
     display: none;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 600px) {
     nav li:nth-of-type(3) {
         flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1050px){
+    #painting {
+        margin: auto;
+        display: block;
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width: 1050px) {
+    main {
+        width: 80vw;
+        margin: auto;
+    }
+    #painting {
+        margin: auto;
+        display: block;
+        width: 55vw;
     }
 }
