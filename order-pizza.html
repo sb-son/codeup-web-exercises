@@ -40,13 +40,19 @@
         <nav>
         <ul class="nav nav-tabs card-header-tabs" id="nav-tab" role="tablist" data-bs-tabs="tabs">
           <li class="nav-item">
-            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><span class="badge bg-secondary rounded-circle me-1">1</span>Size and Crust</button>
+            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="home" aria-selected="true">
+              <span class="badge bg-secondary rounded-circle me-1">1</span>Size and Crust
+            </button>
           </li>
           <li class="nav-item">
-            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><span class="badge bg-secondary rounded-circle me-1">2</span>Cheese and Sauce</button>
+            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+              <span class="badge bg-secondary rounded-circle me-1">2</span>Cheese and Sauce
+            </button>
           </li>
           <li class="nav-item">
-            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><span class="badge bg-secondary rounded-circle me-1">3</span>Toppings</button>
+            <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="contact" aria-selected="false">
+              <span class="badge bg-secondary rounded-circle me-1">3</span>Toppings
+            </button>
           </li>
         </ul>
         </nav>
@@ -54,36 +60,44 @@
       </div>
       <!-- Nav tab content -->
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active text-white bg-primary rounded-1 p-1" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><span class="ms-3">Choose Size and Crust</span></div>
-        <div class="tab-pane fade text-white bg-primary rounded-1 p-1" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"><span class="ms-3">Choose Cheese and Sauce</span></div>
-        <div class="tab-pane fade text-white bg-primary rounded-1 p-1" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab"><span class="ms-3">Choose Toppings</span></div>
+        <div class="tab-pane fade show active text-white bg-primary rounded-1 p-1" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <span class="ms-3">Choose Size and Crust</span>
+        </div>
+        <div class="tab-pane fade text-white bg-primary rounded-1 p-1" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <span class="ms-3">Choose Cheese and Sauce</span>
+        </div>
+        <div class="tab-pane fade text-white bg-primary rounded-1 p-1" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+          <span class="ms-3">Choose Toppings</span>
+        </div>
       </div>
       <form class="card-body tab-content">
         <!-- Content inside first tab -->
-        <div class="tab-content tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"> <!--id="one" role="tabpanel" aria-labelledby="one" data-bs-target="#one"-->
+        <div class="tab-content tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
           <div class="card w-100 mb-4">
             <div class="card-header">Hand Tossed</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Garlic seasoned with a rich, buttery taste.</li>
               <li class="list-group-item"><input type="radio" id="small" name="hand-tossed" value="small">
                 <label for="small">Small(10")</label></li>
-              <li class="list-group-item"><input type="radio" id="medium" name="hand-tossed" value="medium">
-                <label for="medium">Medium(12")</label></li>
+              <li class="list-group-item"><input type="radio" id="medium-tossed" name="hand-tossed" value="medium">
+                <label for="medium-tossed">Medium(12")</label></li>
             </ul>
           </div>
           <div class="card w-100">
             <div class="card-header">Crispy Thin</div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>
-              <li class="list-group-item"><input type="radio" id="medium" name="crispy-thin" value="medium">
-                <label for="medium">Medium(12")</label></li>
+              <li class="list-group-item"><input type="radio" id="medium-crispy" name="crispy-thin" value="medium">
+                <label for="medium-crispy">Medium(12")</label></li>
               <li class="list-group-item"><input type="radio" id="large" name="crispy-thin" value="large">
                 <label for="large">Large(14")</label></li>
             </ul>
           </div>
         </div>
+        </form>
         <!-- Content inside second tab -->
-        <div class="tab-content tab-pane" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"><!--id="two" href="#two" role="tabpanel" aria-labelledby="two" data-bs-target="#two"-->
+      <form class="card-body tab-content">
+        <div class="tab-content tab-pane fade" id="profile" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="card">
             <div class="card-header">Cheese</div>
             <ul class="list-group list-group-flush">
