@@ -146,6 +146,27 @@ function fizzBuzz() {
 fizzBuzz();
 
 
+function getAverageHeight(array) {
+    let totalHeight = 0;
+    for (let element of array) {
+        totalHeight += element.heightInMM
+    }
+    return totalHeight / array.length
+}
+
+console.log(getAverageHeight(hamsters));
+
+
+function getAverageHeight(arr) {
+    let total = 0;
+    arr.forEach(hamster => {
+        total += hamster.heightInMM
+    })
+    return total / hamsters.length;
+}
+
+console.log(getAverageHeight(hamsters)); // should return 93.2;
+
 
 
 
