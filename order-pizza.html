@@ -32,11 +32,14 @@
     <div class="bg-white bg-opacity-50 w-100"><h1 class="d-flex justify-content-center p-1 align-items-center m-auto">Welcome to Pizza World!</h1></div>
   </div>
   <!-- End jumbotron image and header -->
+
+
 <!--Card-->
     <div class="card mt-5 mb-5 d-flex">
+
+      <!-- Nav tab list-->
       <div class="card-header">
         <h2 class="card-title">Build your own pizza!</h2>
-        <!-- Nav tab list-->
         <nav>
           <ul class="nav nav-tabs card-header-tabs" id="nav-tab" role="tablist" data-bs-tabs="tabs">
             <li class="nav-item">
@@ -56,10 +59,14 @@
             </li>
           </ul>
         </nav>
-        <!-- End nav tab list-->
       </div>
-      <!-- Nav tab content -->
+
+      <!-- End nav tab list-->
+
+
+      <!-- Card content -->
       <div class="tab-content" id="myTabContent">
+        <!--  Section 1  -->
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
           <h5 class="bg-primary text-white rounded-1 w-100 p-2">Choose Size and Crust</h5>
           <form class="card-body tab-content">
@@ -90,6 +97,10 @@
           </div>
           </form>
         </div>
+
+<!--  End of section 1  -->
+
+<!--  Section 2  -->
         <div class="tab-pane fade rounded-1" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
           <h5 class="bg-primary text-white p-2 rounded-1 w-100">Choose Cheese and Sauce</h5>
           <form class="card-body tab-content">
@@ -136,6 +147,9 @@
             </div>
           </form>
         </div>
+<!--  End of section 2  -->
+
+<!--Section 3-->
         <div class="tab-pane fade rounded-1" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
           <h5 class="bg-primary text-white p-2 rounded-1 w-100">Choose Toppings</h5>
           <form class="card-body tab-content">
@@ -173,102 +187,14 @@
                 </li>
               </ul>
             </div>
-          <div class="card-footer d-flex justify-content-end mb-3">
-            <button class="btn btn-primary justify-content-end" type="submit">Checkout <i class="fa-solid fa-cart-shopping"></i></button>
-          </div>
+            <div class="card-footer d-flex justify-content-end mb-3">
+              <button class="btn btn-primary justify-content-end" type="submit">Checkout <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
           </form>
+        </div>
+    <!-- End of section 3  -->
       </div>
-      <form class="card-body tab-content">
-        <!-- Content inside first tab -->
-<!--        <div class="tab-content tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">-->
-<!--          <div class="card w-100 mb-4">-->
-<!--            <div class="card-header">Hand Tossed</div>-->
-<!--            <ul class="list-group list-group-flush">-->
-<!--              <li class="list-group-item">Garlic seasoned with a rich, buttery taste.</li>-->
-<!--              <li class="list-group-item"><input type="radio" id="small" name="hand-tossed" value="small">-->
-<!--                <label for="small">Small(10")</label></li>-->
-<!--              <li class="list-group-item"><input type="radio" id="medium-tossed" name="hand-tossed" value="medium">-->
-<!--                <label for="medium-tossed">Medium(12")</label></li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--          <div class="card w-100">-->
-<!--            <div class="card-header">Crispy Thin</div>-->
-<!--            <ul class="list-group list-group-flush">-->
-<!--              <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio</li>-->
-<!--              <li class="list-group-item"><input type="radio" id="medium-crispy" name="crispy-thin" value="medium">-->
-<!--                <label for="medium-crispy">Medium(12")</label></li>-->
-<!--              <li class="list-group-item"><input type="radio" id="large" name="crispy-thin" value="large">-->
-<!--                <label for="large">Large(14")</label></li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </div>-->
-        <!-- Content inside second tab -->
-<!--      <form class="card-body tab-content">-->
-<!--        <div class="tab-content tab-pane fade" id="profile" role="tabpanel" aria-labelledby="nav-profile-tab">-->
-<!--          <div class="card">-->
-<!--            <div class="card-header">Cheese</div>-->
-<!--            <ul class="list-group list-group-flush">-->
-<!--              <li class="list-group-item">How Much?</li>-->
-<!--              <li class="list-group-item">-->
-<!--                <select name="cheese" id="cheese-select">-->
-<!--                  <option value="Normal">Normal</option>-->
-<!--                  <option value="light">Light</option>-->
-<!--                  <option value="Extra">Extra</option>-->
-<!--                  <option value="double">Double</option>-->
-<!--                </select>-->
-<!--              </li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--          <div class="card">-->
-<!--            <div class="card-header">Sauce</div>-->
-<!--            <ul class="list-group list-group-flush">-->
-<!--              <li class="list-group-item">What Type?</li>-->
-<!--              <li class="list-group-item">-->
-<!--                <select name="sauce" id="sauce-type-select">-->
-<!--                  <option value="tomato">Tomato</option>-->
-<!--                  <option value="marinara">Marinara</option>-->
-<!--                  <option value="bbq">BBQ</option>-->
-<!--                  <option value="alfredo">Alfredo</option>-->
-<!--                </select>-->
-<!--              </li>-->
-<!--              <li class="list-group-item">-->
-<!--                <select name="sauce-quantity" id="sauce-quantity-select">-->
-<!--                  <option value="normal">Normal</option>-->
-<!--                  <option value="light">Light</option>-->
-<!--                  <option value="extra">Extra</option>-->
-<!--                </select>-->
-<!--              </li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </form>-->
-        <!-- Content inside third tab -->
-<!--        <div class="tab-pane">-->
-<!--            <div class="card">-->
-<!--              <div class="card-header">Choose Meats</div>-->
-<!--              <ul class="list-group list-group-flush">-->
-<!--                <li class="list-group-item">Beef</li>-->
-<!--                <li class="list-group-item">Ham</li>-->
-<!--                <li class="list-group-item">Philly Steak</li>-->
-<!--                <li class="list-group-item">Bacon</li>-->
-<!--              </ul>-->
-<!--            </div>-->
-<!--            <div class="card" id="three">-->
-<!--            <div class="card-header">Choose Non-Meats</div>-->
-<!--            <ul class="list-group list-group-flush">-->
-<!--              <li class="list-group-item">Green Peppers</li>-->
-<!--              <li class="list-group-item">Mushrooms</li>-->
-<!--              <li class="list-group-item">Onions</li>-->
-<!--              <li class="list-group-item">Jalapeño Peppers</li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="card-footer d-flex justify-content-end">-->
-<!--        <button class="btn btn-primary justify-content-end" type="submit">Next Step ></button>-->
-<!--        </div>-->
-<!--    </div>-->
-  <!--  End nav tab content  -->
-</div>
+    <!--End of Card content-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <!-- Your custom JS goes here -->
