@@ -107,7 +107,7 @@ const hamsters = [
 // }
 
 function getTallestHamster(arr) {
-    var tallest = arr.sort(function(a, b) {
+    let tallest = arr.sort(function(a, b) {
         return b.heightInMM - a.heightInMM;
     });
     return tallest[0];
@@ -167,8 +167,139 @@ function getAverageHeight(arr) {
 
 console.log(getAverageHeight(hamsters)); // should return 93.2;
 
+// #LAO Review
+// ##Questions
+// 1. Write a function that takes in a grocery item object and returns a string representing the price per item for that object.
+//
+//     ```
+// ex.
+let tomatoes = {
+	name: 'tomatoes',
+	quantity: 20,
+	totalPrice: 47
+};
+//
+// getPricePerItem(potatoes) // returns "$2.35"
+// ```
+//
+
+function getPricePerItem(arr) {
+    return arr.totalPrice / arr.quantity
+}
+
+console.log(getPricePerItem(tomatoes));
+
+
+// 2. Write a function that takes in two string arguments: the first being the string assessed, and the second being a single letter. The function should return a count of the occurrences of the letter (second argument) within the string (first argument). This function should count both upper and lowercase instances of the letter.
+//
+//     ```
+// ```
+function countOccurrencesOfLetter(string, letter) {
+    let count = 0;
+    let newLetter = letter.toLowerCase()
+    let newString = string.toLowerCase().split('')
+    for (let i = 0; i < newString.length; i++) {
+        if (newString[i] == newLetter) {
+            count++
+        }
+    }
+return "There are " + count + ' occurrences of ' + letter + ' in the string of ' + string
+}
+
+console.log(countOccurrencesOfLetter("horseradish", "s")); // returns 2
+console.log(countOccurrencesOfLetter("Microsoft Excel: Professional Edition", "E")); // returns 4
+console.log(countOccurrencesOfLetter("Sanrio", "x")); // returns 0
 
 
 
+//
+// 3. Write a function that takes in an array of  grocery item objects and returns the object with the highest `weightInGrams` property.
+//
+//     ```
+// ex.
+const cart = [
+	{
+		name: "Kingsford Charcoal",
+		weightInGrams: 4535
+	}, {
+		name: "Krazy Glue",
+		weightInGrams: 5
+	}, {
+		name: "NVIDIA RTX 4090",
+		weightInGrams: 2186
+	}
+];
 
+// function getHeaviestItem(arr) {
+//     let maxValue  = {weightInGrams: 0}
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i].weightInGrams > maxValue.weightInGrams) {
+//             maxValue.weightInGrams = arr[i].weightInGrams
+//         }
+//     }
+//     return maxValue
+// }
 
+function getHeaviestItem(arr) {
+    let heaviest = arr.sort(function(a, b) {
+        return b.weightInGrams - a.weightInGrams;
+    });
+    return heaviest[0];
+}
+
+console.log(getHeaviestItem(cart)); // returns {name: "Kingsford Charcoal", weightInGrams: 4535}
+// ```
+//
+// 4. Write a function that takes in an array of numbers and returns an array of numbers from the original array that are evenly divisible by 13. If a number is not evenly divisible by 13, it should not be returned. If no elements within the array are evenly divisible by 13, the function should return an empty array.
+//
+//     ```
+// ex.
+const arr1 = [24, 25, 26, 27, 29, 39];
+const arr2 = [13, 26, 39, 52, 65];
+const arr3 = [0, 1, 2, 3, 4, 5];
+
+function getAllDivisibleByThirteen(arr) {
+    arr.forEach(function (num) {
+        arr = arr.filter(num => num % 13 === 0)
+    })
+    return arr
+}
+
+console.log(getAllDivisibleByThirteen(arr1));// returns [26]
+console.log(getAllDivisibleByThirteen(arr2)); // returns [13, 26, 39, 52, 65]
+console.log(getAllDivisibleByThirteen(arr3)); // returns []
+// ```
+//
+// 5. Write a function that takes in a string and returns an object with the following properties:
+//     1. `string` which is to be set the to the argument passed into the function.
+// 2. `numberOfWords` which is to be set to the number of words within the string.
+// 3. `instancesOfE` which to be set to the number of instances of the letter "E" within the argument passed into the function. The count should reflect instances of both uppercase and lowercase "E" (HINT: a previous function maybe useful in achieving this).
+//
+// ```
+// ex.
+function countLetters(string, letter) {
+    let count = 0;
+    let newLetter = letter.toLowerCase()
+    let newString = string.toLowerCase().split('')
+    for (let i = 0; i < newString.length; i++) {
+        if (newString[i] == newLetter) {
+            count++
+        }
+    }
+    return count
+}
+function countWords(string) {
+    let arrOfWords = string.split(' ');
+    return arrOfWords.filter(word => word !== '').length;
+}
+function reviewString(string) {
+    let newObj = {};
+    newObj.string = string;
+    newObj.numberOfWords = countWords(string)
+    newObj.instancesOfE = countLetters(string, "E")
+    return newObj;
+}
+
+console.log(reviewString("Dielectric Grease")); // returns {string: "Dielectric Grease", numberOfWords: 2, instancesOfE: 3}
+console.log(reviewString("Street Fighter EX3")); // returns {string: "Street Fighter EX3", numberOfWords: 3, instancesOfE: 4}
+console.log(reviewString("99")); // returns {string: "99", numberOfWords: 1, instancesOfE: 0}
