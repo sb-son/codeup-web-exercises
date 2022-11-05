@@ -259,7 +259,7 @@ const arr2 = [13, 26, 39, 52, 65];
 const arr3 = [0, 1, 2, 3, 4, 5];
 
 function getAllDivisibleByThirteen(arr) {
-    arr.forEach(function (num) {
+    arr.forEach((num) => {
         arr = arr.filter(num => num % 13 === 0)
     })
     return arr
@@ -303,3 +303,154 @@ function reviewString(string) {
 console.log(reviewString("Dielectric Grease")); // returns {string: "Dielectric Grease", numberOfWords: 2, instancesOfE: 3}
 console.log(reviewString("Street Fighter EX3")); // returns {string: "Street Fighter EX3", numberOfWords: 3, instancesOfE: 4}
 console.log(reviewString("99")); // returns {string: "99", numberOfWords: 1, instancesOfE: 0}
+
+// # Now That's What I Call LAO Review, vol. 2
+// ## Questions
+// 1. Write a function that takes in an array of letters, and returns the array sorted in reverse alphabetical order.
+function sortLetters(arr) {
+    return arr.sort().reverse()
+}
+
+console.log(sortLetters(["a", "b", "c"])); // returns ["c", "b", "a"]
+console.log(sortLetters(["K", "E", "Y"])); // returns ["Y", "K", "E"]
+// ```
+// 2. Write a function that takes in a number and returns an object with the following properties.
+// 1.  `value` which is to be set to the number passed into the function.
+// 2. `doubled` which is to be set to the number passed into the function multiplied by 2.
+// 3. `sign` which is to be set to a string, either `"positive"`, `"negative"`, or `"zero"`, corresponding to the value of the number passed into the function being either positive, negative, or 0.
+
+function reviewNumber(num){
+    let newObj = {};
+    newObj.value = num;
+    newObj.doubled = num * 2;
+    newObj.sign = num > 0 ? "positive" : num < 0  ? 'negative' : 'zero';
+    return newObj;
+}
+
+console.log(reviewNumber(16)); // returns {value: 16, doubled: 32, sign: "positive"}
+console.log(reviewNumber(-4)); // returns {value: -4, doubled: -8, sign: "negative"}
+console.log(reviewNumber(0)); // returns {value: 0, doubled: 0, sign: "zero"}
+// ```
+// 3. Write a function that takes in a string and returns an array where each element is each word that is in the string passed into the function.
+// ```
+
+function arrayOfWords(str){
+    return str.split(' ')
+}
+
+// ex.
+console.log(arrayOfWords("Lovely Day For Coding")); // returns ["Lovely", "Day", "For", "Coding"]
+console.log(arrayOfWords("One-eyed One-horned Flying Purple People Eater")); // returns ["One-eyed", "One-horned", "Flying", "Purple", "People", "Eater"]
+// arrayOfWords("Toad") // returns ["Toad"]
+// ```
+// 4. Write a function that takes in a string and number and returns an object with the following properties
+// 1. `title` which is to be set to the string passed into the function.
+// 2. `price` which is to be set to the number passed into the function.
+// 3. `count` which is to be set to 0.
+//     ```
+
+function createItem(str, num) {
+    let newObj = {title: str, price: num, count: 0}
+    // newObj.title = str;
+    // newObj.price = num;
+    // newObj.count = 0;
+    return newObj;
+}
+
+console.log(createItem("Pokemon TCG Booster Pack", 10.99)); // returns {title: "Pokemon TCG Booster Pack", price: 10.99, count: 0}
+console.log(createItem("Water Bottles (24 Pack)", 27.98)); // returns {title: "Water Bottles (24 Pack)", price: 27.98, count: 0}
+// ```
+// ​
+// // 5. Write a function that takes in an array of objects and returns the object from the array with the most colors in the color property.
+//     ```
+// ex.
+// const hamsters = [
+//     {
+//         name: "Hamtaro",
+//         heightInMM: 86,
+//         fur: ['orange', 'white'],
+//         gender: "male",
+//         dateOfBirth: "August 6"
+//     } , {
+//         name: "Bijou",
+//         heightInMM: 75,
+//         fur: ['white'],
+//         gender: "female",
+//         dateOfBirth: "July 10"
+//     } , {
+//         name: "Oxnard",
+//         heightInMM: 100,
+//         fur: ['grey', 'white'],
+//         gender: "male",
+//         dateOfBirth: "May 3"
+//     } , {
+//         name: "Boss",
+//         heightInMM: 120,
+//         fur: ['brown', 'white'],
+//         gender: "male",
+//         dateOfBirth: "September 21"
+//     } , {
+//         name: "Snoozer",
+//         heightInMM: 85,
+//         fur: ['brown', 'white', "pink"],
+//         gender: "male",
+//         dateOfBirth: "January 14"
+//     }
+// ];
+
+function getMostColorful(arr) {
+    let colorful = arr[0];
+    arr.forEach(function (hamster){
+        if (hamster.fur.length > colorful.fur.length) {
+            colorful = hamster
+        }
+    })
+    return colorful
+}
+console.log(getMostColorful(hamsters)); //returns {name: "Snoozer", heightInMM: 85, fur: ['brown', 'white', "pink"], gender: "male", dateOfBirth: "January 14"}
+
+//todo #11: Write a function letterWithCount that takes two arguments: a text string, and the second being an integer N. The function should return an array of letters that occur *exactly* N times in the string.
+
+// function letterWithCount(str, num) {
+// 	let arr = [];
+// 	let obj = {};
+// 	for (let i = 0; i < str.length; i++) {
+// 		if (obj[str[i]]) {
+// 			obj[str[i]]++;
+// 		} else {
+// 			obj[str[i]] = 1;
+// 		}
+// 	}
+// 	for (let key in obj) {
+// 		if (obj[key] === num) {
+// 			arr.push(key);
+// 		}
+// 	}
+// 	return arr;
+// }
+
+
+// ex.
+console.log(letterWithCount("abbcccddddeeeeeffffff", 1)); // returns ["a"]
+console.log(letterWithCount("abbcccddddeeeeeffffff", 2)); // returns ["b"]
+console.log(letterWithCount("abbcccddddeeeeeffffff", 3)); // returns ["c"]
+console.log(letterWithCount("abbcccddddeeeeeffffff", 4)); // returns ["d"]
+console.log(letterWithCount("abbcccddddeeeeeffffff", 5)); // returns ["e"]
+console.log(letterWithCount("abbcccddddeeeeeffffffgggggg", 6)); // returns ["f", "g"]
+// Extra credit: return a list of letters that occur *at least* N times.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
