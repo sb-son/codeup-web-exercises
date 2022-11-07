@@ -411,23 +411,23 @@ console.log(getMostColorful(hamsters)); //returns {name: "Snoozer", heightInMM: 
 
 //todo #11: Write a function letterWithCount that takes two arguments: a text string, and the second being an integer N. The function should return an array of letters that occur *exactly* N times in the string.
 
-// function letterWithCount(str, num) {
-// 	let arr = [];
-// 	let obj = {};
-// 	for (let i = 0; i < str.length; i++) {
-// 		if (obj[str[i]]) {
-// 			obj[str[i]]++;
-// 		} else {
-// 			obj[str[i]] = 1;
-// 		}
-// 	}
-// 	for (let key in obj) {
-// 		if (obj[key] === num) {
-// 			arr.push(key);
-// 		}
-// 	}
-// 	return arr;
-// }
+function letterWithCount(str, num) {
+	let arr = [];
+	let obj = {};
+	for (let i = 0; i < str.length; i++) {
+		if (obj[str[i]]) {
+			obj[str[i]]++;
+		} else {
+			obj[str[i]] = 1;
+		}
+	}
+	for (let key in obj) {
+		if (obj[key] === num) {
+			arr.push(key);
+		}
+	}
+	return arr;
+}
 
 
 // ex.
