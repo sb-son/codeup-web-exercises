@@ -37,16 +37,16 @@
         var mainHeader = document.getElementById('main-header');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        function jsIsCool() {
-        mainHeader.innerHTML = 'Javascript is Cool';
+        function jsIsCool(text) {
+        mainHeader.innerHTML = text;
         }
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById('sub-header');
 
         // TODO: Set the text color of subHeader to blue
-        function subHeaderBlue() {
-            subHeader.style.color = 'blue';
+        function subHeaderBlue(color) {
+            subHeader.style.color = color;
         }
 
         // TODO: Uncomment the next line and get all list items
@@ -78,18 +78,47 @@
             subParagraphs[0].innerHTML = 'Mission Accomplished!'
         }
 
+        // function cssBtnChangeClass() {
+        //     if (document.getElementById('btn1').onclick = jsIsCool => {
+        //         btn2.removeAttribute("class");
+        //         btn2.setAttribute("class", "btn-after");
+        //     });
+        // }
+
 
         var btn1 = document.getElementById('btn1');
-        btn1.addEventListener('click', jsIsCool);
+        btn1.addEventListener('click', function () {
+            jsIsCool('Javascript is Cool');
+            btn2.removeAttribute("class");
+            btn2.setAttribute("class", "btn-after");
+            this.removeAttribute("class");
+            this.setAttribute("class", 'btn-before');
+        });
 
         var btn2 = document.getElementById('btn2');
-        btn2.addEventListener("click", subHeaderBlue)
+        btn2.addEventListener("click", function () {
+            subHeaderBlue('blue');
+            btn3.removeAttribute("class");
+            btn3.setAttribute("class", "btn-after");
+            this.removeAttribute("class");
+            this.setAttribute("class", 'btn-before');
+        });
 
         var btn3 = document.getElementById('btn3');
-        btn3.addEventListener("click", colorListItems)
+        btn3.addEventListener("click", function () {
+            colorListItems();
+            btn4.removeAttribute("class");
+            btn4.setAttribute("class", "btn-after");
+            this.removeAttribute("class");
+            this.setAttribute("class", 'btn-before');
+        });
 
         var btn4 = document.getElementById('btn4');
-        btn4.addEventListener("click", changeSubParagraphText)
+        btn4.addEventListener("click", function () {
+            changeSubParagraphText();
+            this.removeAttribute("class");
+            this.setAttribute("class", 'btn-before');
+        });
 
 
 
