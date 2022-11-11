@@ -26,9 +26,9 @@
         culpa qui officia deserunt mollit anim id est laborum.
     </p>
     <button type="button" class="btn-after" id="btn1">This button turns thing cool</button>
-    <button type="button" class="btn-before" id="btn2">This button changes sub header to blue</button>
-    <button type="button" class="btn-before" id="btn3">This button give style to the list items</button>
-    <button type="button" class="btn-before" id="btn4">This button changes the paragraph</button>
+    <button type="button" class="btn-before" id="btn2">This button makes things cooler</button>
+    <button type="button" class="btn-before" id="btn3">Keep clicking...</button>
+    <button type="button" class="btn-before" id="btn4">Last button!</button>
 </div>
 <script>
     (function() {
@@ -63,6 +63,10 @@
         // let li = document.getElementsByTagName("li")[0];
         // let liContent = li.innerHTML;
         // li.innerHTML = "<a href='https://google.com'>" + liContent + "</a>";
+        //
+        //Takes contents of html and adds <a> tags
+        // let liContent = document.getElementById('github').innerHTML
+        // document.getElementById('github').innerHTML = "<a href='https://github.com/sb-son'>" + liContent + "</a>"
 
         function colorListItems() {
             for (let i = 0; i < listItems.length; i++) {
@@ -71,7 +75,8 @@
                     listItems[i].style.color = '#3B94D9';
                     listItems[i].innerHTML = 'See my work on Github below'
                 } else if (i % 2 === 0) {
-                    listItems[i].style.color = 'grey';
+                    listItems[i].style.color = '#91a5b4';
+                    listItems[4].style.display = 'none'
                     let liContent = document.getElementById('github').innerHTML
                     document.getElementById('github').innerHTML = "<a href='https://github.com/sb-son'>" + liContent + "</a>"
 
