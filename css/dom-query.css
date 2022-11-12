@@ -12,7 +12,6 @@
 .btn-before {
     display: none;
 }
-
 /*button taken from https://getcssscan.com/css-buttons-examples*/
 .btn-after {
     background-color: rgba(51, 51, 51, 0.05);
@@ -21,7 +20,7 @@
     color: var(--primary-bg-color);
     cursor: pointer;
     display: inline-block;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
     font-weight: 500;
     line-height: 20px;
@@ -72,33 +71,75 @@ a.githubLink {
     font-size: 3em;
     font-family: "Notable", sans-serif;
     color: var(--text-color);
+    background-color: var(--primary-bg-color);
     display: flex;
     justify-content: center;
 }
-.red {
-    margin: .5em;
-    text-shadow: 1px 0 10px #F21B3F;
-}
-.blue {
-    margin: .5em;
-    text-shadow: 1px 0 10px var(--bright-blue);
-}
-.purple {
-    margin: .5em;
-    text-shadow: 1px 0 10px #A14EBF;
-}
-.green {
-    margin: .5em;
-    text-shadow: 1px 0 10px #29bf12;
-}
-.yellow {
-    margin: .5em;
-    text-shadow: 1px 0 10px #FFB800;
-}
-.orange {
-    margin: .5em;
-    text-shadow: 1px 0 10px #FF9914;
+span {
+    width: 100%;
+    justify-content: center;
 }
 a:hover {
-
+    transition: background-color 500ms linear;
+    background-color: var(--dim-blue);
+}
+.red {
+    display: flex;
+    margin: .5em auto;
+    text-shadow: 1px 0 10px #F21B3F;
+}
+span.red:hover {
+    transition: text-shadow 500ms ease-in-out, margin 700ms ease-in-out;
+    margin: 0;
+    align-items: flex-end;
+    text-shadow: 3px 5px 15px #F21B3F;
+}
+.blue {
+    display: flex;
+    margin: .5em auto;
+    text-shadow: 1px 0 10px var(--bright-blue);
+}
+span.blue:hover {
+    transition: text-shadow 500ms ease-in-out, transform 600ms ease;
+    text-shadow: 3px 5px 15px var(--bright-blue);
+    justify-content: center;
+    align-items: center;
+    transform: rotate(360deg);
+}
+.purple {
+    display: flex;
+    margin: .5em auto;
+    text-shadow: 1px 0 10px #A14EBF;
+}
+span.purple:hover {
+    transition: text-shadow 500ms ease-in-out;
+    text-shadow: 3px 5px 15px #A14EBF;
+}
+.green {
+    display: flex;
+    margin: .5em auto;
+    text-shadow: 1px 0 10px #29bf12;
+}
+span.green:hover {
+    transition: text-shadow 500ms ease-in-out;
+    text-shadow: 3px 5px 15px #29bf12;
+}
+.yellow {
+    display: flex;
+    margin: .5em auto;
+    text-shadow: 1px 0 10px #FFB800;
+}
+span.yellow:hover {
+    transition: text-shadow 500ms ease-in-out;
+    text-shadow: 3px 5px 15px #FFB800;
+}
+.orange {
+    display: flex;
+    margin: .5em auto;
+    text-shadow: 1px 0 10px #FF9914;
+}
+span.orange:hover {
+    transition: text-shadow 500ms ease-in-out;
+    flex-direction: column;
+    text-shadow: 3px 5px 15px #FF9914;
 }
