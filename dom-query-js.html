@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
     <link rel="stylesheet" href="css/dom-query.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Notable&display=swap" rel="stylesheet">
 </head>
 <body>
 <div id="turnCool">
@@ -77,8 +80,7 @@
                 } else if (i % 2 === 0) {
                     listItems[i].style.color = '#91a5b4';
                     listItems[4].style.display = 'none'
-                    let liContent = document.getElementById('github').innerHTML
-                    document.getElementById('github').innerHTML = "<a href='https://github.com/sb-son'>" + liContent + "</a>"
+                    document.getElementById('github').innerHTML = "<a href='https://github.com/sb-son' class='githubLink'>" + "<span>G</span><span>I</span><span>T</span><span>H</span><span>U</span><span>B</span>" + "</a>"
 
                 } else {
                     listItems[i].style.display = 'none'
@@ -113,6 +115,7 @@
             mainHeader.setAttribute('class', 'header-style')
         });
 
+        var bodyBackground = document.getElementsByTagName('body');
         var btn2 = document.getElementById('btn2');
         btn2.addEventListener("click", function () {
             subHeaderBlue('#3B94D9');
@@ -120,8 +123,23 @@
             btn3.setAttribute("class", "btn btn-after");
             this.removeAttribute("class");
             this.setAttribute("class", 'btn-before');
+            bodyBackground[0].setAttribute('class', 'body-bg');
         });
 
+        function setClassInArr(arr, classAttribute) {
+            for (var i = 0; i < arr.length; i++) {
+                arr[i].setAttribute('class', classAttribute);
+            }
+        }
+        function differentClass(arr, classAttributes) {
+            let classAtt = classAttributes.split(" ")
+            for (var i =0; i < arr.length; i++) {
+                arr[i].setAttribute('class', classAtt[i])
+            }
+
+        }
+
+        var githubShadow = document.getElementsByTagName('span');
         var btn3 = document.getElementById('btn3');
         btn3.addEventListener("click", function () {
             colorListItems();
@@ -129,6 +147,8 @@
             btn4.setAttribute("class", "btn btn-after");
             this.removeAttribute("class");
             this.setAttribute("class", 'btn-before');
+            differentClass(githubShadow, "red blue purple green yellow orange")
+            setClassInArr(listItems, 'github');
         });
 
         var btn4 = document.getElementById('btn4');
