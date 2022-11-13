@@ -11,7 +11,7 @@
 <body>
 <div id="turnCool">
     <h1 id="main-header">Hello World!</h1>
-    <ul>
+    <ul id="ul-padding">
         <li data-dbid="1">Item 1</li>
         <li data-dbid="2">Item 2</li>
         <li data-dbid="3" id="github">Item 3</li>
@@ -102,7 +102,6 @@
         //         btn2.setAttribute("class", "btn-after");
         //     });
         // }
-
         var turnCool = document.getElementById('turnCool');
         var btn1 = document.getElementById('btn1');
         btn1.addEventListener('click', function () {
@@ -136,10 +135,12 @@
             for (var i =0; i < arr.length; i++) {
                 arr[i].setAttribute('class', classAtt[i])
             }
-
         }
-
-        var githubShadow = document.getElementsByTagName('span');
+        function setClassForTagName(tagName, classAtt) {
+            tagName.setAttribute('class', classAtt)
+        }
+        var unorderedList = document.getElementsByTagName('ul')[0];
+        var githubSpan = document.getElementsByTagName('span');
         var btn3 = document.getElementById('btn3');
         btn3.addEventListener("click", function () {
             colorListItems();
@@ -147,7 +148,9 @@
             btn4.setAttribute("class", "btn btn-after");
             this.removeAttribute("class");
             this.setAttribute("class", 'btn-before');
-            differentClass(githubShadow, "red blue purple green yellow orange")
+            githubSpan[5].setAttribute("id", "move-orange");
+            setClassForTagName(unorderedList, "ul-padding")
+            differentClass(githubSpan, "red blue purple green yellow orange");
             setClassInArr(listItems, 'github');
         });
 
