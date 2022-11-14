@@ -76,12 +76,11 @@
                 var dbId = listItems[i].getAttribute("data-dbid");
                 if (dbId == 1) {
                     listItems[i].style.color = '#3B94D9';
-                    listItems[i].innerHTML = 'See my work on Github below'
+                    listItems[i].innerHTML = 'See my work on Github by clicking the link below'
                 } else if (i % 2 === 0) {
                     listItems[i].style.color = '#91a5b4';
                     listItems[4].style.display = 'none'
                     document.getElementById('github').innerHTML = "<a href='https://github.com/sb-son' class='githubLink'>" + "<span>G</span><span>I</span><span>T</span><span>H</span><span>U</span><span>B</span>" + "</a>"
-
                 } else {
                     listItems[i].style.display = 'none'
                 }
@@ -92,38 +91,9 @@
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
         console.log(subParagraphs)
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        function changeSubParagraphText() {
-            subParagraphs[0].innerHTML = 'Mission Accomplished!'
+        function changeSubParagraphText(text) {
+            subParagraphs[0].innerHTML = text
         }
-
-        // function cssBtnChangeClass() {
-        //     if (document.getElementById('btn1').onclick = jsIsCool => {
-        //         btn2.removeAttribute("class");
-        //         btn2.setAttribute("class", "btn-after");
-        //     });
-        // }
-        var turnCool = document.getElementById('turnCool');
-        var btn1 = document.getElementById('btn1');
-        btn1.addEventListener('click', function () {
-            jsIsCool('Javascript is Cool');
-            btn2.removeAttribute("class");
-            btn2.setAttribute("class", "btn btn-after");
-            this.removeAttribute("class");
-            this.setAttribute("class", 'btn-before');
-            turnCool.setAttribute('class', 'container');
-            mainHeader.setAttribute('class', 'header-style')
-        });
-
-        var bodyBackground = document.getElementsByTagName('body');
-        var btn2 = document.getElementById('btn2');
-        btn2.addEventListener("click", function () {
-            subHeaderBlue('#3B94D9');
-            btn3.removeAttribute("class");
-            btn3.setAttribute("class", "btn btn-after");
-            this.removeAttribute("class");
-            this.setAttribute("class", 'btn-before');
-            bodyBackground[0].setAttribute('class', 'body-bg');
-        });
 
         function setClassInArr(arr, classAttribute) {
             for (var i = 0; i < arr.length; i++) {
@@ -139,6 +109,31 @@
         function setClassForTagName(tagName, classAtt) {
             tagName.setAttribute('class', classAtt)
         }
+
+        //First button
+        var turnCool = document.getElementById('turnCool');
+        var btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', function () {
+            jsIsCool('Javascript is Cool');
+            btn2.removeAttribute("class");
+            btn2.setAttribute("class", "btn btn-after");
+            this.removeAttribute("class");
+            this.setAttribute("class", 'btn-before');
+            turnCool.setAttribute('class', 'container');
+            mainHeader.setAttribute('class', 'header-style')
+        });
+        //Second button
+        var bodyBackground = document.getElementsByTagName('body');
+        var btn2 = document.getElementById('btn2');
+        btn2.addEventListener("click", function () {
+            subHeaderBlue('#3B94D9');
+            btn3.removeAttribute("class");
+            btn3.setAttribute("class", "btn btn-after");
+            this.removeAttribute("class");
+            this.setAttribute("class", 'btn-before');
+            bodyBackground[0].setAttribute('class', 'body-bg');
+        });
+        //Third button
         var unorderedList = document.getElementsByTagName('ul')[0];
         var githubSpan = document.getElementsByTagName('span');
         var btn3 = document.getElementById('btn3');
@@ -153,15 +148,13 @@
             differentClass(githubSpan, "red blue purple green yellow orange");
             setClassInArr(listItems, 'github');
         });
-
+        //Last button
         var btn4 = document.getElementById('btn4');
         btn4.addEventListener("click", function () {
-            changeSubParagraphText();
+            changeSubParagraphText('Mission Accomplished!');
             this.removeAttribute("class");
             this.setAttribute("class", 'btn-before');
         });
-
-
 
     })();
 </script>
