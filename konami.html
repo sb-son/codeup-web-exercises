@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<style>
+    body {
+        background-color: #1a1e38;
+    }
+    .highlight {
+        color: #E6ECF0;
+    }
+    .arrow {
+        font-size: 10em;
+    }
+    .up {
+
+    }
+    .down {
+        transform: rotate(180deg);
+        display: inline-block;
+    }
+    .left {
+
+    }
+    .right {
+
+    }
+    #pacman {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: #F2D648;
+        position: relative;
+        margin-top: 20px;
+        display: inline-block;
+    }
+    .pellets {
+        content: ".";
+        width: 10px;
+        height: 10px;
+        color: #F2D648;
+    }
+    .box {
+        border: 2px #1E1ED9 solid;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+</style>
+<body>
+<h1 class="highlight">Konami Code</h1>
+<div class="arrow box">
+    <span class="up">^</span>
+    <span class="up">^</span>
+    <span class="down">^</span>
+    <span class="down">^</span>
+    <span class="left"><</span>
+    <span class="right">></span>
+    <span class="left"><</span>
+    <span class="right">></span>
+    <span class="b">b</span>
+    <span class="a">a</span>
+    <span class="enter">Enter</span>
+<div class="">
+    <canvas id="canvas"></canvas>
+    <span id="pacman"></span>
+</div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+
+    const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a', 'Enter'];
+    let count = 0;
+    $(document).keyup(function(event){
+        let keyStroke = event.key;
+        if (keyStroke === konamiCode[count]) {
+            let span = 'span:nth-of-type(' + (count + 1) + ')';
+            count++;
+            $(span).addClass('highlight');
+            if (count === konamiCode.length) {
+                $('span').removeClass('highlight');
+                $(span).addClass('pellets');
+            }
+        } else if (keyStroke !== konamiCode[count]) {
+            count = 0;
+            $('span').removeClass('highlight');
+        }
+    });
+    let right = ['ArrowRight'];
+    let left = ['ArrowLeft'];
+    let up = ['ArrowUp'];
+    let down = ['ArrowDown'];
+    $('#pacman').keydown(function(event) {
+        let arrowKeys = event.key;
+        if (arrowKeys === right) {
+
+        }
+    })
+
+    const canvas = document.querySelector('canvas');
+    const ctx = canvas.getContext('2d');
+
+    ctx.beginPath();
+    ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+    ctx.stroke();
+
+
+
+</script>
+</body>
+</html>
