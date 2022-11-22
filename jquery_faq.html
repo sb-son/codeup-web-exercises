@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery FAQ</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
 </head>
 <body>
 
@@ -50,8 +55,20 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     "use strict";
+    $('dd').addClass('invisible')
 
+    $('dl').after(`<a href="#">Toggle Hidden</a>`)
+    $('a').click(function () {
+        $('dd').toggleClass("invisible")
+    })
 
+    $('dt').click(function () {
+        if (this.style.backgroundColor !== 'lightblue') {
+            $(this).css('background-color', 'lightblue')
+        } else {
+            $(this).css('background-color', '')
+        }
+    });
 
 
 
