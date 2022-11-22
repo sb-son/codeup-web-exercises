@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery FAQ</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<!--Information gathered from https://www.nps.gov/bibe/learn/index.htm-->
+    <h1>About Big Bend National Park</h1>
+    <dl>
+        <dt>Nature</dt>
+        <dd>
+            Delve into the park's flora and fauna, geology, ecosystems, and other natural features.
+        </dd>
+        <dt>History</dt>
+        <dd>
+            Learn about the lives of early settlers, ranchers, miners, and Native Americans.
+        </dd>
+        <dt>Ecosystems</dt>
+        <dd>
+            Big Bend is an outdoor laboratory of geology, biology, and diversity.
+        </dd>
+        <dt>Education</dt>
+        <dd>
+            Plan a field trip, find lesson plans, or schedule a ranger presentation through distance learning.
+        </dd>
+        <dt>Fact Sheet</dt>
+        <dd>
+            How big? How many species? Statistics, Significance, and Purpose.
+        </dd>
+        <dt>News</dt>
+        <dd>
+            Stay informed about events and happenings at Big Bend National Park.
+        </dd>
+        <dt>For Kids</dt>
+        <dd>
+            See what there is for kids to do online and during your visit to Big Bend National Park.
+        </dd>
+        <dt>Management</dt>
+        <dd>
+            Meet our park staff, and view statistics, laws, and policies.
+        </dd>
+        <dt>Park Bookstore</dt>
+        <dd>
+            Prepare for your visit and learn about the park with books, maps, and guides from the Big Bend Natural History Association.
+        </dd>
+    </dl>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    $('dd').addClass('invisible')
+
+    $('dl').after(`<a href="#">Toggle Hidden</a>`)
+    $('a').click(function () {
+        $('dd').toggleClass("invisible")
+    })
+
+    $('dt').click(function () {
+        if (this.style.backgroundColor !== 'lightblue') {
+            $(this).css('background-color', 'lightblue')
+        } else {
+            $(this).css('background-color', '')
+        }
+    });
+
+
+
+
+</script>
+</body>
+</html>
