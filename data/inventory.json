@@ -30,5 +30,14 @@
             "tool"
         ],
         "price": 10
-    }
+    }, {
+    "title": "Chainsaw",
+    "quantity": 7,
+    "categories": [
+        "tool",
+        "gas",
+        "powered"
+    ],
+    "price": 115
+}
 ]
