@@ -97,8 +97,8 @@
     $('ul.last-li').last().after(`<a class="yellow-background" href="#">Yellow Background</a>`)
 
     $('a.yellow-background').click(function () {
-        $('ul.last-li').each(function (index) {
-        $(this).children().first().css('background-color', 'yellow')
+        $('ul.last-li').each(function () {
+            $(this).children().last().css('background-color', 'yellow')
         })
     })
 
