@@ -53,12 +53,27 @@
     </dl>
 
     <h3>State Parks of Texas</h3>
-    <ul id="state-parks-texas">
-        <li>Abilene</li>
+    <ul class="last-li" id="parks-texas">
         <li>Big Bend</li>
         <li>Choke Canyon</li>
         <li>Davis Mountains</li>
         <li>Enchanted Rock</li>
+    </ul>
+
+    <h3>National Parks of Alaska</h3>
+    <ul class="last-li" id="parks-alaska">
+        <li>Chugach</li>
+        <li>Denali</li>
+        <li>Kachemak Bay</li>
+        <li>Wood-Tikchik</li>
+    </ul>
+
+    <h3>National Parks of California</h3>
+    <ul class="last-li" id="parks-california">
+        <li>Yosemite</li>
+        <li>Sequoia</li>
+        <li>Joshua Tree</li>
+        <li>Death Valley</li>
     </ul>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -66,28 +81,34 @@
     "use strict";
     $('dd').addClass('invisible')
 
-    $('dl').after(`<a href="#">Toggle Hidden</a>`)
-    $('a').click(function () {
+    $('dl').after(`<a class="dl-hidden" href="#">Toggle Hidden</a>`)
+    $('a.dl-hidden').click(function () {
         $('dd').toggleClass("invisible")
     })
-
-    $('dt').click(function () {
-        if (this.style.backgroundColor !== 'lightblue') {
-            $(this).css('background-color', 'lightblue')
-        } else {
-            $(this).css('background-color', '')
-        }
-    });
 
     $('dt').click(function () {
         $(this).css('background-color', 'lightblue')
     },
         function () {
-            (this).css('background-color', '')
+            $(this).css('background-color', '')
         }
     );
 
+    $('ul.last-li').last().after(`<a class="yellow-background" href="#">Yellow Background</a>`)
 
+    $('a.yellow-background').click(function () {
+        $('ul.last-li').each(function (index) {
+        $(this).children().first().css('background-color', 'yellow')
+        })
+    })
+
+    $('h3').click(function () {
+        $(this).next().children().css('font-weight', 'bold')
+    })
+
+    $('li').click(function () {
+        $(this).parent().children().first().css('color', 'blue')
+    })
 
 
 </script>
