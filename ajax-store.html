@@ -34,7 +34,7 @@
         let list = data;
         for (let i = 0; i < list.length; i++) {
             let inventoryList = `<th>${list[i].title}</th><td>${list[i].quantity}</td><td>${list[i].price}</td><td>${list[i].categories}</td>`
-        $('#insertProducts').append("<tr>" + inventoryList + "</tr>")
+        $('#insertProducts').append("<tr class='tools'>" + inventoryList + "</tr>")
         }
     })
 })();
