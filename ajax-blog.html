@@ -18,9 +18,20 @@
               console.log(data)
               let list = data;
               for (let i = 0; i < list.length; i++) {
-                  let blogList = `<h3>${list[i].title}</h3><p>${list[i].content}</p><p>${list[i].date}</p><p>${list[i].categories}</p>`
+                  let blogList =
+                  `<h3>${list[i].title}</h3>
+                  <p>${list[i].content}</p>
+                  <p>${list[i].date}</p>
+                  <p class="categories">${list[i].categories}</p>`
+
                   $('#posts').append(blogList)
               }
+
+              $(".categories").each(function () {
+                  let current = $(this).html()
+                  let splitStr = current.split(',').join(', ')
+                  $(this).html(splitStr)
+              })
           })
       })();
   </script>
