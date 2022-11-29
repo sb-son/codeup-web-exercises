@@ -22,7 +22,7 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
-(function() {
+$(function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
     // TODO: Take the data from inventory.json and append it to the products table
@@ -33,11 +33,16 @@
     $.ajax('data/inventory.json').done(function(data) {
         let list = data;
         for (let i = 0; i < list.length; i++) {
-            let inventoryList = `<th>${list[i].title}</th><td>${list[i].quantity}</td><td>${list[i].price}</td><td>${list[i].categories}</td>`
+            let inventoryList = `<th>${list[i].title}</th><td>${list[i].quantity}</td><td>${list[i].price}</td><td class="categories">${list[i].categories}</td>`
         $('#insertProducts').append("<tr class='tools'>" + inventoryList + "</tr>")
         }
+        $(".categories").each(function () {
+            let current = $(this).html()
+            let splitStr = current.split(',').join(', ')
+            $(this).html(splitStr)
+        })
     })
-})();
+});
 </script>
 
 </body>
