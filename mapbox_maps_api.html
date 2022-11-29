@@ -25,15 +25,12 @@
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
 
 <!-- Mapbox Geocoder Util Methods -->
-<script src="mapbox-geocoder-utils.js"></script>
-
+<script src="js/mapbox-geocoder-utils.js"></script>
+<script src="js/keys.js"></script>
 <!-- Custom JS -->
 <script>
-
-  var accessToken = YOUR_ACCESS_TOKEN_HERE;
-
+  var accessToken = mapBoxKey;
   mapboxgl.accessToken = accessToken;
-
   var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v9',
@@ -46,19 +43,17 @@
     popupHTML: "<p>Remember the Alamo!</p>"
   };
 
-  function placeMarkerAndPopup(info, token, map) {
-    geocode(info.address, token).then(function(coordinates) {
-      var popup = new mapboxgl.Popup()
-              .setHTML(info.popupHTML);
-      var marker = new mapboxgl.Marker()
-              .setLngLat(coordinates)
-              .addTo(map)
-              .setPopup(popup);
-      popup.addTo(map);
-    });
-  }
+  // reverse geocode method from mapbox-geocoder-utils.js
+  reverseGeocode({lng: -98.4861, lat: 29.4260}, accessToken).then(function(results) {
+    // logs the address for The Alamo
+    console.log(results);
+  });
 
-  placeMarkerAndPopup(alamoInfo, accessToken, map);
+  geocode("600 Navarro St #350, San Antonio, TX 78205", mapBoxKey).then(function(result) {
+    console.log(result);
+    map.setCenter(result);
+    map.setZoom(20);
+  });
 
 </script>
 </body>
