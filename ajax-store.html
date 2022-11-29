@@ -33,14 +33,12 @@ $(function() {
     $.ajax('data/inventory.json').done(function(data) {
         let list = data;
         for (let i = 0; i < list.length; i++) {
-            let inventoryList = `<th>${list[i].title}</th><td>${list[i].quantity}</td><td>${list[i].price}</td><td class="categories">${list[i].categories}</td>`
+            let inventoryList = `<th>${list[i].title}</th>
+            <td>${list[i].quantity}</td>
+            <td>${list[i].price}</td>
+            <td class="categories">${list[i].categories.join(', ')}</td>`
         $('#insertProducts').append("<tr class='tools'>" + inventoryList + "</tr>")
         }
-        $(".categories").each(function () {
-            let current = $(this).html()
-            let splitStr = current.split(',').join(', ')
-            $(this).html(splitStr)
-        })
     })
 });
 </script>
