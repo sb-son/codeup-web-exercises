@@ -29,6 +29,19 @@
 <script src="js/keys.js"></script>
 <!-- Custom JS -->
 <script>
+"use strict";
+
+    let mouse = {
+        x: undefined,
+        y: undefined
+    }
+
+    window.addEventListener("mousemove", function(e) {
+        mouse.x = e.x;
+        mouse.y = e.y;
+        console.log(e)
+    })
+
     var accessToken = mapBoxKey;
     mapboxgl.accessToken = accessToken;
     var map = new mapboxgl.Map({
@@ -45,10 +58,10 @@
                 'type': 'FeatureCollection',
                 'features': [
                     {
-                        'type': 'Feature',
+                        'type': 'Restaurant',
                         'properties': {
                             'description':
-                                "<strong>Singh's</strong><p>Laid-back restaurant featuring homestyle Vietnamese cooking, a bar & colorful wall art.</p>"
+                                "<strong>Singh's</strong><p>Laid-back restaurant featuring homestyle Vietnamese cooking, a bar & colorful wall art.</p><img src='img/singhs.jpg' style='height: 100%, width=100%'>"
                         },
                         'geometry': {
                             'type': 'Point',
@@ -56,10 +69,10 @@
                         }
                     },
                     {
-                        'type': 'Feature',
+                        'type': 'Restaurant',
                         'properties': {
                             'description':
-                                '<strong>Barbaro</strong><p>Rustic wood-fired pizza & creative toppings served in a brick-walled space with a full bar.</p>'
+                                '<strong>Barbaro</strong><p>Rustic wood-fired pizza & creative toppings served in a brick-walled space with a full bar.</p><img src=\'img/barbaro.jpg\' style=\'height: 200px\', width=\'100%\'>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -67,10 +80,10 @@
                         }
                     },
                     {
-                        'type': 'Feature',
+                        'type': 'Restaurant',
                         'properties': {
                             'description':
-                                '<strong>Ito Ramen</strong><p>Unfussy, quick-serve option offering Japanese dishes such as ramen, takoyaki, gyoza & more.</p>'
+                                '<strong>Ito Ramen</strong><p>Unfussy, quick-serve option offering Japanese dishes such as ramen, takoyaki, gyoza & more.</p><img src=\'img/itoramen.jpg\' style=\'height: 300px\', width=\'100%\'>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -78,10 +91,10 @@
                         }
                     },
                     {
-                        'type': 'Feature',
+                        'type': 'Restaurant',
                         'properties': {
                             'description':
-                                '<strong>The Dogfather</strong><p>Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer.</p>'
+                                '<strong>The Dogfather</strong><p>Funky spot for inventive hot dog combinations (including vegan) with soft drinks & craft beer.</p><img src=\'img/dogfather.jpg\' style=\'height: 260px\', width=\'100%\'>'
                         },
                         'geometry': {
                             'type': 'Point',
@@ -117,6 +130,7 @@
         // Copy coordinates array.
             const coordinates = e.features[0].geometry.coordinates.slice();
             const description = e.features[0].properties.description;
+            console.log(coordinates)
 
         // Ensure that if the map is zoomed out such that multiple
         // copies of the feature are visible, the popup appears
@@ -135,13 +149,15 @@
             popup.remove();
         });
 
-        map.on('click', 'places', () => {
-            map.zoomIn({duration: 1500});
-        })
-
-        // map.on('dblclick', 'places', () => {
-        //     map.zoomOut({duration: 1500})
+        // map.on('click', 'places', () => {
+        //     if ('places') {
+        //         map.zoomIn({duration: 1500});
+        //     }
         // })
+
+        map.on('click', 'places', () => {
+                map.zoomIn({duration: 1500});
+        })
     });
 
 </script>
