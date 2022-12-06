@@ -90,13 +90,9 @@ console.log(developers)
 // });
 // list += '</ul>';
 
-
+let list = '<ul>';
 for (let developer of developers) {
-  let list = `<ul>
-                <li>${developer}</li>
-                <li>${developer}</li>
-                <li>${developer}</li>
-                <li>${developer}</li>
-              </ul>`
-  console.log(list)
+  list = `${list}<li>${developer}</li>`
 }
+list += '</ul>'
+console.log(list)
